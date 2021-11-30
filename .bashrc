@@ -19,6 +19,9 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# for setting history time format
+HISTTIMEFORMAT="%Y-%m-%d %T "
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -59,7 +62,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     prompt_color='\[\033[;32m\]'
     info_color='\[\033[1;34m\]'
-    prompt_symbol=📛
+    prompt_symbol=🤖
     if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
 	prompt_color='\[\033[;94m\]'
 	info_color='\[\033[1;31m\]'
